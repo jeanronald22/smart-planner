@@ -1,8 +1,7 @@
 # 📅 SmartPlanner – Application Android Moderne
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Langage Principal](https://img.shields.io/github/languages/top/votre-nom/smartplanner)
-![Taille du dépôt](https://img.shields.io/github/repo-size/votre-nom/smartplanner)
+
 ---
 
 **SmartPlanner** est une application Android minimaliste et performante, conçue pour vous aider à organiser efficacement vos tâches quotidiennes et à gérer vos projets, en mettant l'accent sur une architecture **Android moderne** et une expérience utilisateur Material 3.
