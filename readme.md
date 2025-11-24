@@ -1,61 +1,60 @@
-# 📘 **README.md – SmartPlanner**
+# 📅 SmartPlanner – Application Android Moderne
 
-```markdown
-# 📅 SmartPlanner  
-_application Android moderne pour organiser tâches & projets_
-
-SmartPlanner est une application Android minimaliste conçue pour aider les utilisateurs à organiser leurs tâches quotidiennes et gérer leurs projets.
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Langage Principal](https://img.shields.io/github/languages/top/votre-nom/smartplanner)
+![Taille du dépôt](https://img.shields.io/github/repo-size/votre-nom/smartplanner)
 ---
+
+**SmartPlanner** est une application Android minimaliste et performante, conçue pour vous aider à organiser efficacement vos tâches quotidiennes et à gérer vos projets, en mettant l'accent sur une architecture **Android moderne** et une expérience utilisateur Material 3.
 
 ## 🚀 Fonctionnalités (MVP)
 
-### ✅ Inclus dans la première version (MVP)
-- Création de tâches (titre + description)
-- Modification de tâches
-- Suppression de tâches
-- Marquer une tâche comme terminée / non terminée
-- Création de projets
-- Associer une tâche à un projet
-- Filtrer les tâches par projet
-- Thème clair basé sur Material 3
-- Persistance locale avec Room  
-- Architecture MVVM propre
+Cette première version se concentre sur la **gestion des tâches en mode local (Offline-First)** pour démontrer la maîtrise de l'écosystème Android moderne.
 
-### 🔜 Prochaines étapes (Future Release)
-- Tags / catégories avancées
-- Notifications / rappels
-- Mode sombre automatique
-- Synchronisation cloud (API FastAPI)
-- Widgets Android
-- Export / backup
+### ✅ Inclus dans la version actuelle (MVP)
+* **Gestion Complète des Tâches (CRUD) :** Création, lecture, modification et suppression de tâches (incluant titre et description).
+* **Statut de Complétion :** Marquer une tâche comme terminée ou non terminée.
+* **Organisation par Projet :** Création de projets et association d'une tâche à un projet unique.
+* **Filtrage :** Affichage des tâches filtrées par projet.
+* **Thème :** Implémentation du **Thème Clair** basé sur **Material 3**.
+* **Persistance Locale :** Utilisation de **Room Database** pour le stockage hors ligne.
+* **Architecture Robuste :** Mise en œuvre d'une architecture **MVVM** propre et scalable.
 
 ---
 
-## 🧱 Architecture
+### 🔜 Roadmap (Prochaines Étapes)
+* **Gestion Avancée :** Tags / catégories pour une classification plus fine.
+* **Rappels :** Notifications et alertes pour les échéances.
+* **Design :** Implémentation complète du **Mode Sombre** automatique.
+* **Synchronisation Cloud :** Intégration du **SmartPlanner API (Spring boot)** pour la synchronisation des données.
+* **Améliorations UI/UX :** Ajout de **Widgets Android** et fonctionnalités d'export/backup.
 
-SmartPlanner utilise une architecture propre et scalable basée sur les bonnes pratiques Android :
+---
+
+## 🧱 Architecture du Projet
+
+SmartPlanner est structuré en modules (packages) pour garantir une séparation des préoccupations claire, suivant le principe de l'architecture propre :
 
 ```
 
 com.smartplanner
 │
-├── data
-│   ├── local (Room)
-│   ├── repository
-│   └── mapper
+├── data                     \# Implémentation des sources de données
+│   ├── local                \# Room Database et DAOs
+│   ├── repository           \# Implémentation du Repository
+│   └── mapper               \# Logique de conversion (Model \<-\> Entity)
 │
-├── domain
-│   ├── model
-│   └── repository
+├── domain                   \# Le cœur de l'application (logique métier)
+│   ├── model                \# Classes de données Pures (la vérité de l'app)
+│   └── repository           \# Interfaces des Repositories
 │
-├── ui
-│   ├── screens
-│   ├── components
-│   └── navigation
+├── ui                       \# Couche de présentation (Jetpack Compose)
+│   ├── screens              \# Composables des écrans principaux
+│   ├── components           \# Composables réutilisables (design system)
+│   └── navigation           \# Gestion du graphe de navigation (Navigation Compose)
 │
-├── di (Hilt)
-└── MainActivity.kt
+├── di                       \# Injection de dépendances (Hilt Modules)
+└── MainActivity.kt          \# Point d'entrée de l'application
 
 ````
 
@@ -63,97 +62,87 @@ com.smartplanner
 
 ## 🛠️ Stack Technique
 
-| Domaine | Technologie |
-|--------|-------------|
-| UI | Jetpack Compose + Material 3 |
-| Architecture | MVVM |
-| DI | Hilt |
-| Persistance | Room Database |
-| Async | Kotlin Coroutines + Flow |
-| Navigation | Navigation Compose |
-| Langage | Kotlin |
+| Domaine | Technologie | Rôle Principal |
+| :--- | :--- | :--- |
+| **UI/Design** | **Jetpack Compose + Material 3** | Construction de l'interface utilisateur moderne. |
+| **Architecture** | **MVVM** | Séparation des couches et testabilité. |
+| **Injection** | **Hilt** | Gestion des dépendances simplifiée. |
+| **Persistance** | **Room Database** | Stockage de données structurées hors ligne. |
+| **Asynchronisme** | **Kotlin Coroutines + Flow** | Gestion efficace des opérations asynchrones. |
+| **Navigation** | **Navigation Compose** | Gestion du flux entre les écrans. |
+| **Langage** | **Kotlin** | Langage principal de développement. |
 
 ---
 
 ## 📦 Installation & Lancement
 
-### 1. Cloner le projet
+### 1. Cloner le Projet
 ```bash
-git clone https://github.com/votre-nom/smartplanner.git
+git clone [https://github.com/votre-nom/smartplanner.git](https://github.com/votre-nom/smartplanner.git)
 cd smartplanner
 ````
 
-### 2. Ouvrir dans Android Studio
+### 2\. Ouvrir et Synchroniser
 
-* File → Open → sélectionner le dossier du projet
-* Android Studio se charge d’installer les dépendances Gradle automatiquement
+  * Ouvrir le dossier `smartplanner` dans **Android Studio**.
+  * Laisser Gradle synchroniser et télécharger toutes les dépendances.
 
-### 3. Lancer l’app
+### 3\. Lancer l’Application
 
-* Brancher un device ou lancer un émulateur
-* Cliquer ▶️ **Run**
+  * Assurez-vous qu'un émulateur ou un appareil physique est connecté.
+  * Cliquez sur le bouton ▶️ **Run**.
 
----
+-----
 
-## 🧩 Structure des branches Git
+## 🧩 Conventions Git
 
-| Branche   | Rôle                           |
-| --------- | ------------------------------ |
-| **main**  | version stable prête à publier |
-| **dev**   | développement actif            |
-| feature/* | nouvelles fonctionnalités      |
-| fix/*     | corrections de bugs            |
+### Structure des Branches
 
----
+| Branche | Rôle |
+| :--- | :--- |
+| **`main`** | Version stable et livrable (prête pour la production ou le déploiement). |
+| **`dev`** | Environnement de développement actif et tests d'intégration. |
+| **`feature/*`** | Développement de nouvelles fonctionnalités. |
+| **`fix/*`** | Corrections de bugs (hotfixes). |
 
-## 📝 Conventions de Commit
+### Conventions de Commit
 
-Ce projet utilise les **commits conventionnels** :
+Ce projet suit les **Conventional Commits** pour un historique clair et générable :
 
 ```
 <type>(<scope>): <description>
 ```
 
-Exemples :
+| Type | Description | Exemple |
+| :--- | :--- | :--- |
+| **`feat`** | Nouvelle fonctionnalité | `feat(task): ajouter l'édition de la description` |
+| **`fix`** | Correction de bug | `fix(project): éviter le crash lors de la création sans nom` |
+| **`refactor`** | Remaniement de code | `refactor(vm): nettoyer TaskViewModel` |
+| **`docs`** | Changement de documentation | `docs(readme): mettre à jour la roadmap` |
 
-```
-feat(task): add task creation feature
-fix(project): fix project list not updating
-refactor(vm): clean TaskViewModel logic
-```
-
----
+-----
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues !
-Vous pouvez ouvrir une issue, proposer une fonctionnalité ou créer une PR.
+Nous accueillons les contributions \! N'hésitez pas à :
 
----
+1.  Ouvrir une **Issue** pour signaler un bug ou proposer une fonctionnalité.
+2.  Créer une **Pull Request (PR)** avec vos améliorations ou corrections.
 
-## 📄 License
+-----
 
-Projet disponible sous licence **MIT**.
-Tu peux l’utiliser librement dans tes projets personnels ou professionnels.
+## 📄 Licence
 
----
+Ce projet est distribué sous la **Licence MIT**. Vous êtes libre de l'utiliser, le modifier et le distribuer.
+
+-----
 
 ## 👨‍💻 Auteur
 
-**Jean Ronald MBOUMGNI**
-Ingénieur logiciel & développeur mobile
-🇨🇲 Cameroun
+**[Jean Ronald MBOUMGNI](https://portfolio.vimelec.tech/)**
+Ingénieur Logiciel & Développeur Mobile
+📍 Cameroun
 
 ```
 
 ---
-
-Si tu veux, je peux ajouter :  
-🔥 un **badge GitHub (build, license, langage, version Android)**  
-🔥 un **screenshot / mockup**  
-🔥 une **section “Roadmap”**  
-🔥 une **documentation API** (pour la future synchronisation FastAPI)  
-🔥 un **diagramme d’architecture**  
-
-Tu veux qu’on enrichisse le README avec ça ?
-```
