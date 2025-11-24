@@ -1,0 +1,82 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+gradle-app.setting
+
+# Generated files
+captures/
+output.json
+
+# IntelliJ / Android Studio
+*.iml
+.idea/
+.idea/workspace.xml
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/kotlinScripting.xml
+
+# Jetpack Compose Compiler Cache
+**/compose-compiler/
+**/compose-metrics/
+**/compose-reports/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keystore (important — ne jamais commit)
+*.jks
+*.keystore
+*.keystores
+signing/
+app/release/
+
+# Generated APK/AAB/JAR
+*.apk
+*.ap_
+*.aab
+*.aar
+*.jar
+
+# Kotlin specific
+*.kotlin_metadata
+kotlin-js-store/
+
+# Hilt
+hilt/
+**/hilt/
+*/hilt_*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Crashlytics / Firebase (si ajouté plus tard)
+crashlytics-build.properties
+app/google-services.json
+
+# Navigation safe args (si jamais utilisé)
+build/generated/source/navigation-*
+
+# Local test files
+test-output/
+test-results/
+
+# Android local caches
+.externalNativeBuild
+.cxx
+
+# ===============================
+# End of file
+# ===============================
+
