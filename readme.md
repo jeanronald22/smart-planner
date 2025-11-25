@@ -142,6 +142,3 @@ Ce projet est distribué sous la **Licence MIT**. Vous êtes libre de l'utiliser
 Ingénieur Logiciel & Développeur Mobile
 📍 Cameroun
 
-```
-
----

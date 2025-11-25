@@ -9,34 +9,51 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-	primary = Purple80,
-	secondary = PurpleGrey80,
-	tertiary = Pink80
+private val LightColorScheme = lightColorScheme(
+	primary = BluePrimary,
+	onPrimary = BlueOnPrimary,
+	primaryContainer = BluePrimaryContainer,
+	onPrimaryContainer = BlueOnPrimaryContainer,
+	secondary = BlueSecondary,
+	onSecondary = BlueOnSecondary,
+	secondaryContainer = BlueSecondaryContainer,
+	onSecondaryContainer = BlueOnPrimaryContainer,
+	background = BlueBackground,
+	onBackground = BlueOnBackground,
+	surface = BlueSurface,
+	onSurface = BlueOnSurface,
+	surfaceVariant = BlueSurfaceVariant,
+	onSurfaceVariant = BlueOnSurfaceVariant,
+	outline = BlueOutline,
+	// erreurs par défaut
+	error = Color(0xFFB00020),
+	onError = Color.White
 )
 
-private val LightColorScheme = lightColorScheme(
-	primary = Purple40,
-	secondary = PurpleGrey40,
-	tertiary = Pink40
-
-	/* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+private val DarkColorScheme = darkColorScheme(
+	primary = BlueDarkPrimary,
+	onPrimary = BlueDarkOnPrimary,
+	primaryContainer = BlueDarkPrimaryContainer,
+	onPrimaryContainer = BlueDarkOnPrimaryContainer,
+	secondary = BlueDarkSecondary,
+	onSecondary = BlueDarkOnSecondary,
+	background = BlueDarkBackground,
+	onBackground = BlueDarkOnBackground,
+	surface = BlueDarkSurface,
+	onSurface = BlueDarkOnSurface,
+	surfaceVariant = BlueDarkSurfaceVariant,
+	onSurfaceVariant = BlueDarkOnSurfaceVariant,
+	outline = BlueDarkOutline,
+	error = Color(0xFFCF6679),
+	onError = Color.Black
 )
 
 @Composable
 fun SmartPlannerTheme(
 	darkTheme: Boolean = isSystemInDarkTheme(),
-	// Dynamic color is available on Android 12+
 	dynamicColor: Boolean = true,
 	content: @Composable () -> Unit
 ) {
