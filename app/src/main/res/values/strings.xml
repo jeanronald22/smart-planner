@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Smart Planner</string>
+    <string name="task">Tasks</string>
+    <string name="empty_task">No task yet !</string>
+    <string name="empty_task_description">Create your first task to get organized.</string>
+    <string name="add_task">Add a task</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Planner</string>
+    <string name="task">Tâches</string>
+    <string name="empty_task">Pas encore de tâches !</string>
+    <string name="empty_task_description">Crée ta première tâche pour bien t’organiser.</string>
+    <string name="add_task">Ajouter une tâche</string>
+</resources>

@@ -30,7 +30,7 @@ import com.smartplanner.data.projects.Project
 	), ForeignKey(
 		entity = Category::class,
 		parentColumns = ["id"],
-		childColumns = ["category"],
+		childColumns = ["categoryId"],
 		onDelete = ForeignKey.CASCADE
 	)], indices = [Index("projectId"), Index("categoryId")]
 )

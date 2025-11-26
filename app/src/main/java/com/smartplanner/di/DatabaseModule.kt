@@ -5,6 +5,7 @@ import com.smartplanner.data.AppDatabase
 import com.smartplanner.data.categories.CategoryDao
 import com.smartplanner.data.projects.ProjectDAO
 import com.smartplanner.data.tasks.TaskDao
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,12 +24,16 @@ class DatabaseModule {
 		return AppDatabase.Companion.getInstance(context)
 	}
 
+
+	@Singleton
 	@Provides
 	fun provideTaskDao(db: AppDatabase): TaskDao = db.taskDao()
 
+	@Singleton
 	@Provides
 	fun provideProjectDao(db: AppDatabase): ProjectDAO = db.projectDao()
 
+	@Singleton
 	@Provides
 	fun provideCategoryDao(db: AppDatabase): CategoryDao = db.categoryDao()
 }
