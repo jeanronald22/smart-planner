@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 import com.smartplanner.data.categories.Category
 import com.smartplanner.data.projects.Project
 
+
 /**
  * Represents a `Task` entity stored in the `tasks` table.
  *
@@ -38,7 +39,7 @@ data class Task(
 	@PrimaryKey(autoGenerate = true) val id: Int = 0,
 	val title: String,
 	val description: String,
-	val isCompleted: Boolean,
+	val isCompleted: Boolean = false,
 	val deadline: Long? = null,
 	val projectId: Int? = null,
 	val categoryId: Int

@@ -45,9 +45,7 @@ class MainActivity : ComponentActivity() {
 					) {
 						composable(BottomBarItem.HOME.route) { HomeScreen() }
 						composable(BottomBarItem.SETTINGS.route) { Settings() }
-						composable(BottomBarItem.TASKS.route) {
-							TaskScreen()
-						}
+						composable(BottomBarItem.TASKS.route) {TaskScreen() }
 					}
 
 					Box(
